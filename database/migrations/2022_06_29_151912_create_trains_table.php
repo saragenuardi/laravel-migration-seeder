@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrains extends Migration
+class CreateTrainsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,7 +21,7 @@ class CreateTrains extends Migration
             $table->time('orario_di_partenza', 5);
             $table->time('orario_di_arrivo', 5);
             $table->string('codice_treno', 20);
-            $table->tinyInteger('numero_carrozze', 20);
+            $table->tinyInteger('numero_carrozze');
             $table->boolean('in_orario', 1);
             $table->boolean('cancellato', 1);
             $table->timestamps();
